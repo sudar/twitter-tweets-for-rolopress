@@ -193,8 +193,15 @@ class Rolo_Twitter_Tweets extends WP_Widget {
 		if ( $show < 1 || 20 < $show )
 			$show = '5';
 		$hidereplies = (bool) $instance['hidereplies'];
-		$before_timesince = esc_attr($instance['beforetimesince']);
+		$before_timesince = esc_attr($instance['beforetimesince']);?> 
 
+		<div style="float:left;width:98%;">
+		<p><img class="rolo_widget_icon" src= <?php echo ROLOPRESS_IMAGES  . '/admin/rolopress-icon.gif' ?> />
+		Display Contact and Company tweets from Twitter. <em>This is a Smart Widget, which means it only displays when it is supposed to: when you view an individual company or contact page.</em>
+		</p>
+		</div>
+		
+		<?php
 		echo '<p><label for="' . $this->get_field_id('title') . '">' . __('Title:') . '
 		<input class="widefat" id="' . $this->get_field_id('title') . '" name="' . $this->get_field_name('title') . '" type="text" value="' . $title . '" />
 		</label></p>
